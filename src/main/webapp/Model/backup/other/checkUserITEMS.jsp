@@ -1,0 +1,3 @@
+{
+  "LOG_INResult": "[{\"FILEPATH\":null,\"TITLE_NAME\":\"นาย\",\"FIRST_NAME\":\"อนุรัตน์\",\"LAST_NAME\":\"สมตน\",\"ID_CARD\":null,\"POSITIONS\":\"2\",\"DEP_NAME\":\"สถาบันการแพทย์ฉุกเฉินแห่งชาติ\",\"BIRTHDATE\":\"25-05-2011\",\"ADDRESS\":\"   \",\"SOI\":null,\"ROAD\":null,\"POSTCODE\":null,\"MOO_CODE\":\"00\",\"TAMBOL_CODE\":\"00\",\"AMPHUR_CODE\":\"00\",\"CHANGWAT_CODE\":\"02\",\"CHANGWAT_NAME\":null,\"AMPHUR_NAME\":null,\"TUMBON_NAME\":null,\"PHONE\":null}]"
+}
