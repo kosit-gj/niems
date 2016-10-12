@@ -1,7 +1,4 @@
-<%
-    response.addHeader("Access-Control-Allow-Origin", "*");
-    response.addHeader("Access-Control-Allow-Credentials", "true");
-%>
+<%@include file="../includes/header.jsp" %>
 <%@ page import="com.niems.dwh.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -30,7 +27,7 @@
 		  query+=" INNER JOIN NIEMS_CATE_LINK NCL";
 		  query+=" ON NL.\"cate_link_id\"=NCL.\"cate_link_id\""; 
 		  query+=" INNER JOIN NIEMS_ROLE_MAP_LINK NRML ON NL.\"link_id\"=NRML.\"link_id\"";
-		  query+=" WHERE NL.\"cate_link_id\" = '"+cate_link_id+"' AND (NRML.\"role_id\"='"+role_id+"' OR '"+role_id+"'='All')";
+		  query+=" WHERE NL.\"cate_link_id\" = '"+cate_link_id+"' AND (NRML.\"role_id\"='"+role_id+"' OR '"+role_id+"'='All') ORDER BY NL.\"link_name\"";
 		  
 		    	  //out.print(query);
     	  String columns="1,2,3,4,5,6,7,8,9,10";

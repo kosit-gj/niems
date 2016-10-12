@@ -1,7 +1,4 @@
-<%
-    response.addHeader("Access-Control-Allow-Origin", "*");
-    response.addHeader("Access-Control-Allow-Credentials", "true");
-%>
+<%@include file="../includes/header.jsp" %>
 <%@ page import="com.niems.dwh.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -63,6 +60,7 @@ connectionJndi jndi = new connectionJndi();
         	 //out.println("[\"empty\"]");
         	 //out.println(callback+"([\"empty\"])");
         	 out.println("[\"empty\"]");
+        	 session.setAttribute("authen","success"); 
         }else{
         	 out.println(dataObject);
         	 session.setAttribute("authen","success"); 
