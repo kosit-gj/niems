@@ -30,17 +30,38 @@
 			out.println("[\"Error\"]");
 
 		}else{
-		/*	
-		final String auth_host = "mail1.miems.go.th";
+		
+		final String auth_host = "mail1.niems.go.th";
 		final String auth_port = "25";
 		final String auth_email = "anurut.s@niems.go.th";
 		final String auth_password = "Anurut53011";
-		*/
+		
+		/*
 		final String auth_host = "smtp.gmail.com";
 		final String auth_port = "465";
 		final String auth_email = "kosit@goingjesse.com";
 		final String auth_password = "nong010535546";
+		*/
+		/*
+		final String auth_host = "smtp.gmail.com";
+        final String auth_port = "465";
+        final String auth_email = "anurut.som.2526@gmail.com";
+        final String auth_password = "iydot8jt";
+	*/
+/*
+		final String auth_host = "smtp.gmail.com";
+        final String auth_port = "465";
+        final String auth_email = "krumsakul0611@gmail.com";
+        final String auth_password = "gram0611";
 		
+
+		final String auth_host = "smtp.gmail.com";
+        final String auth_port = "25";
+        final String auth_email = "krumsakul0611@gmail.com";
+        final String auth_password = "gram0611";
+		
+        */    
+        
 		Properties props = new Properties();
 		props.put("mail.smtp.host", auth_host);
 		props.put("mail.smtp.socketFactory.port", auth_port);
@@ -48,6 +69,7 @@
 		               "javax.net.ssl.SSLSocketFactory");
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.port", auth_port);
+		props.put("mail.smtp.starttls.enable", "true");
 
 
           try {
