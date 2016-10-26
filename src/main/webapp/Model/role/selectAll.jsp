@@ -11,7 +11,7 @@
   
          
 
-    	  String  query=" select * FROM NIEMS_ROLE"; 
+    	  String  query=" select * FROM NIEMS_ROLE order by \"role_name\" asc"; 
 		    	 
 		    	  //out.print(query);
     	  String columns="1,2,3,4";

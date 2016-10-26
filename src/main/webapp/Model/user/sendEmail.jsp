@@ -1,7 +1,4 @@
-<%
-    response.addHeader("Access-Control-Allow-Origin", "*");
-    response.addHeader("Access-Control-Allow-Credentials", "true");
-%>
+<%@include file="../includes/header.jsp" %>
 <%@ page import="java.util.Properties" %>               
 <%@ page import="javax.mail.Message" %>
 <%@ page import="javax.mail.MessagingException" %>
@@ -14,6 +11,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
   <%
 		/*
 		final String auth_host = "mail.thaicreate.com";
@@ -30,12 +28,12 @@
 			out.println("[\"Error\"]");
 
 		}else{
-		
+		/*
 		final String auth_host = "mail1.niems.go.th";
 		final String auth_port = "25";
 		final String auth_email = "anurut.s@niems.go.th";
 		final String auth_password = "Anurut53011";
-		
+		*/
 		/*
 		final String auth_host = "smtp.gmail.com";
 		final String auth_port = "465";
@@ -48,19 +46,15 @@
         final String auth_email = "anurut.som.2526@gmail.com";
         final String auth_password = "iydot8jt";
 	*/
-/*
-		final String auth_host = "smtp.gmail.com";
-        final String auth_port = "465";
-        final String auth_email = "krumsakul0611@gmail.com";
-        final String auth_password = "gram0611";
-		
 
 		final String auth_host = "smtp.gmail.com";
-        final String auth_port = "25";
-        final String auth_email = "krumsakul0611@gmail.com";
-        final String auth_password = "gram0611";
+        final String auth_port = "465";
+        final String auth_email = "kosit2.arom@gmail.com";
+        final String auth_password = "010535546";
 		
-        */    
+
+		
+           
         
 		Properties props = new Properties();
 		props.put("mail.smtp.host", auth_host);
@@ -85,7 +79,8 @@
         	  
         	  Message message = new MimeMessage(mailSession);
         	  
-              message.setFrom(new InternetAddress(auth_email)); // From
+        	  //setFrom(new InternetAddress(fromEmail, name));
+              message.setFrom(new InternetAddress(auth_email,"ระบบคลังข้อมูลการแพทย์ฉุกเฉิน(Data Warehouse)")); // From
               
               /*** Recipient ***/
               message.setRecipients(Message.RecipientType.TO,
@@ -105,6 +100,6 @@
               throw new RuntimeException(e);
           }
 		}
-	//http://localhost:8082/niems/Model/user/sendEmail.jsp?user_name=abcd&password=1234&email=nn.it@hotmail.com
+	//http://localhost:8082/niems/Model/user/sendEmail.jsp?user_name=abcd&password=1234&email=nn.it@hotmail.com&emailType=changePass
   %>
 

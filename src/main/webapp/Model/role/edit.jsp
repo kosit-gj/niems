@@ -16,7 +16,7 @@
 
     	  String  query=" "; 
     	  query+="select * FROM NIEMS_ROLE ";
-    	  query+=" WHERE \"role_id\" = '"+role_id+"'";
+    	  query+=" WHERE \"role_id\" = '"+role_id+"' order by \"role_name\" asc";
     	  
     	  
 		  // out.print(query);
