@@ -60,117 +60,26 @@ String callback = request.getParameter("callback");
 		hashedpasswd.append(hx);
 	}
 	passwordMD5 = hashedpasswd.toString();
-//Manage MD5 END
+	//Manage MD5 END
   
   connectionJndi jndi = new connectionJndi();
   
 	String  query=""; 
-	Integer count=1;
   
 	  query+=" UPDATE NIEMS_USER";
-	  query+=" SET";
+	  query+=" SET \"prefix\"='"+paramPrefix+"'";
 	  
- if(!paramPrefix.equals("")){
- 
-  if(count==1){
-  	query+="  \"prefix\"='"+paramPrefix+"'";
-  }else{
-	query+="  ,\"prefix\"='"+paramPrefix+"'";  
-  }
-  count+=1;
- }
- 
- if(!paramFirstName.equals("")){
-  
-  if(count==1){
-	  query+="  \"first_name\"='"+paramFirstName+"'";
-  }else{
-	  query+=" , \"first_name\"='"+paramFirstName+"'"; 
-  }
-  count+=1;
- }
-	  
-if(!paramLastName.equals("")){
-		  
-		  if(count==1){
-			  query+="  \"last_name\"='"+paramLastName+"'";
-		  }else{
-			  query+=" , \"last_name\"='"+paramLastName+"'";
-		  }
-		  count+=1;
-	  }
-
-
-if(!paramEmail.equals("")){
-	  
-	  if(count==1){
-		  query+="  \"email\"='"+paramEmail+"'";
-	  }else{
-		  query+=" , \"email\"='"+paramEmail+"'";
-	  }
-	  count+=1;
-}
-
-if(!paramTel.equals("")){
-	  
-	  if(count==1){
-		  query+="  \"tel\"='"+paramTel+"'";
-	  }else{
-		  query+=" , \"tel\"='"+paramTel+"'";
-	  }
-	  count+=1;
-}
-
-if(!paramProvince.equals("")){
-	  
-	  if(count==1){
-		  query+="  \"province\"='"+paramProvince+"'";
-	  }else{
-		  query+=" , \"province\"='"+paramProvince+"'";
-	  }
-	  count+=1;
-}
-
-
-if(!paramPosition.equals("")){
-	  
-	  if(count==1){
-		  query+="  \"position\"='"+paramPosition+"'";
-	  }else{
-		  query+=" , \"position\"='"+paramPosition+"'";
-	  }
-	  count+=1;
-}
-
-if(!paramOraganization.equals("")){
-	  
-	  if(count==1){
-		  query+="  \"organization\"='"+paramOraganization+"'";
-	  }else{
-		  query+=" , \"organization\"='"+paramOraganization+"'";
-	  }
-	  count+=1;
-}
-
-if(!paramUpdatedDttm.equals("")){
-	  
-	  if(count==1){
-		  query+="  \"updated_dttm\"="+paramUpdatedDttm+"";
-	  }else{
-		  query+=" , \"updated_dttm\"="+paramUpdatedDttm+"";
-	  }
-	  count+=1;
-}
-	  
-	  //query+="  \"prefix\"='"+paramPrefix+"'";
-	  //query+=" , \"first_name\"='"+paramFirstName+"'";
-	  //query+=" , \"last_name\"='"+paramLastName+"'";
-	  //query+=" , \"email\"='"+paramEmail+"'";
-	  //query+=" , \"tel\"='"+paramTel+"'";
-	  //query+=" , \"province\"='"+paramProvince+"'";
-	  //query+=" , \"position\"='"+paramPosition+"'";
-	  //query+=" , \"organization\"='"+paramOraganization+"'";
-	  //query+=" , \"updated_dttm\"="+paramUpdatedDttm+"";
+	  query+=" , \"first_name\"='"+paramFirstName+"'";
+	  query+=" , \"last_name\"='"+paramLastName+"'";
+	  query+=" , \"email\"='"+paramEmail+"'";
+	  query+=" , \"tel\"='"+paramTel+"'";
+	  query+=" , \"province\"='"+paramProvince+"'";
+	  //query+=" , \"status\"='"+paramStatus+"'";
+	  query+=" , \"position\"='"+paramPosition+"'";
+	  query+=" , \"organization\"='"+paramOraganization+"'";
+	  //query+=" , \"user_items\"='"+paramUserItems+"'";
+	  //query+=" , \"role_id\"='"+paramRoleId+"'";
+	  query+=" , \"updated_dttm\"="+paramUpdatedDttm+"";
 
 	  query+=" WHERE \"user_name\"='"+paramUserName+"'";
   
@@ -203,7 +112,18 @@ if(!paramUpdatedDttm.equals("")){
 }
 */
 /*
-http://localhost:8083/niems/Model/user/update_by_user_items.jsp?user_name=1460600053789&&password=1234&prefix=%E0%B8%99%E0%B8%B2%E0%B8%87&first_name=%E0%B9%82%E0%B8%86%E0%B8%A9%E0%B8%B4%E0%B8%95&last_name=%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%93%E0%B9%8C%E0%B8%AA%E0%B8%A7%E0%B8%B0&email=kosit2@gmail.com&province=bangkok&status=true&position=SAA&organization=GJ&user_items=1&role_id=1&update_dttm=2016-09-12%2014:00:20&tel=010535546
+http://192.168.1.49:8082/niems/Model/user/update.jsp
+?user_name=123456
+&password=1234
+&prefix=%E0%B8%99%E0%B8%B2%E0%B8%87
+&first_name=%E0%B9%82%E0%B8%86%E0%B8%A9%E0%B8%B4%E0%B8%95
+&last_name=%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%93%E0%B9%8C%E0%B8%AA%E0%B8%A7%E0%B8%B0
+&email=kosit2@gmail.com&province=bangkok
+&status=true&position=SAA
+&organization=GJ
+&user_items=1
+&role_id=1
+&update_dttm=2016-09-12%2014:00:20
 */
 
 
